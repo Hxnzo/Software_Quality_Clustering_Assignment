@@ -61,7 +61,7 @@ public class clustering {
         System.out.println("\n----------------------------------------------------------------------------------------------------------------\n");
     }
     
-    //Displays clusters and their instances
+    //displays clusters and their instances
     private static void displayClusters(Dataset[] clusters) 
     {
         //iterate through the clusters
@@ -79,7 +79,7 @@ public class clustering {
         }
     }
     
-    //Calculate and display evaluation scores each dataset
+    //calculate and display evaluation scores each dataset
     private static void displayScores(Dataset[] clusters) 
     {
         //calculate all the values
