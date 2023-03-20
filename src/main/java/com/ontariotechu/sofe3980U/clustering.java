@@ -82,14 +82,16 @@ public class clustering {
     //calculate and display evaluation scores each dataset
     private static void displayScores(Dataset[] clusters) 
     {
-        //calculate all the values
+        //calculate the euclidean distance
         DistanceMeasure calcEucDistance = new EuclideanDistance();
+
+        //calculate all the evaluation values
         ClusterEvaluation calcSumOfSqrErr = new SumOfSquaredErrors();
         ClusterEvaluation calcCindex = new CIndex(calcEucDistance);
         ClusterEvaluation calcGamma = new Gamma(calcEucDistance);
         ClusterEvaluation calcAIC = new AICScore();
     
-        //display all the values
+        //display all the evaluation values
         System.out.println("SumOfSquaredErrors score of Clusters: " + calcSumOfSqrErr.score(clusters));
         System.out.println("Cindex score of Clusters: " + calcCindex.score(clusters));
         System.out.println("Gamma score of Clusters: " + calcGamma.score(clusters));
